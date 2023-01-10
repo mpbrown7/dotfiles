@@ -1,0 +1,35 @@
+Host *
+HostKeyAlgorithms +ssh-rsa
+
+Host *github.com
+User mpbrown7
+IdentityFile ~/.ssh/id_ed25519_github
+
+Host yellow
+User mpbrown
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 60
+StrictHostKeyChecking no
+
+Host *
+User matthew.brown
+IdentityFile ~/.ssh/id_rsa
+ServerAliveInterval 60
+StrictHostKeyChecking no
+
+#Host *
+#User matthew.brown
+#IdentityFile ~/.ssh/id_rsa
+#UseKeychain yes
+#AddKeysToAgent yes
+#ServerAliveInterval 60
+#StrictHostKeyChecking no
+#ControlPath /tmp/%r@%h:%p
+
+#Host *
+#KexAlgorithms +diffie-hellman-group1-sha1
+#Ciphers +aes128-cbc,aes256-cbc
+#Protocol 2
+
+#Host *
+#	IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
