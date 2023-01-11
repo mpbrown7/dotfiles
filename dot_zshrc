@@ -203,7 +203,7 @@ fi
 #export PATH="/Users/matthew.brown/.gem/ruby/3.0.0/bin:$PATH"
 #export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 #eval "$(rbenv init -)"
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
