@@ -5,7 +5,7 @@ Host *github.com
 User mpbrown7
 IdentityFile ~/.ssh/id_ed25519_github
 
-Host yellow
+Host 100.*
 User mpbrown
 IdentityFile ~/.ssh/id_rsa
 ServerAliveInterval 60
