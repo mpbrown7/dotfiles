@@ -159,7 +159,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # "To activate the autosuggestions, add the following at the end of your .zshrc:"
 # zsh-autosuggestions
-source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # "To activate these completions, add the following to your .zshrc:"
 #zsh-completions
@@ -172,7 +172,7 @@ fi
 
 # "To activate the syntax highlighting, add the following at the end of your .zshrc:"
 # zsh-syntax-highlighting
-source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #
 setopt nohashdirs
@@ -193,7 +193,7 @@ bashcompinit
 #
 #source /usr/local/ibmcloud/autocomplete/zsh_autocomplete
 
-source $HOMEBREW_PREFIX/etc/bash_completion.d/az
+source $(brew --prefix)/etc/bash_completion.d/az
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
