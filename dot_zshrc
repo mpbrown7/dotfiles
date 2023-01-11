@@ -1,6 +1,7 @@
 # Fig pre block. Keep at the top of this file.
 export PATH="${PATH}:${HOME}/.local/bin"
-eval "$(fig init zsh pre)"
+#eval "$(fig init zsh pre)"
+eval "$(init zsh pre)"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -8,7 +9,7 @@ eval "$(fig init zsh pre)"
 #eval "$(starship init zsh)"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/mpbrown/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -158,7 +159,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # "To activate the autosuggestions, add the following at the end of your .zshrc:"
 # zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # "To activate these completions, add the following to your .zshrc:"
 #zsh-completions
@@ -171,7 +172,7 @@ fi
 
 # "To activate the syntax highlighting, add the following at the end of your .zshrc:"
 # zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #
 setopt nohashdirs
@@ -190,9 +191,9 @@ autoload bashcompinit
 bashcompinit
 
 #
-source /usr/local/ibmcloud/autocomplete/zsh_autocomplete
+#source /usr/local/ibmcloud/autocomplete/zsh_autocomplete
 
-source /usr/local/etc/bash_completion.d/az
+source $HOMEBREW_PREFIX/etc/bash_completion.d/az
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -202,11 +203,12 @@ fi
 #export PATH="/Users/matthew.brown/.gem/ruby/3.0.0/bin:$PATH"
 #export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 #eval "$(rbenv init -)"
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
 # Fig post block. Keep at the bottom of this file.
-eval "$(fig init zsh post)"
+#eval "$(fig init zsh post)"
+eval "$(init zsh post)"
 
