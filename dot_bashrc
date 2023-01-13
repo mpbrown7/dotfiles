@@ -1,0 +1,21 @@
+# Use bash-completion, if available
+#[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+#    . /usr/share/bash-completion/bash_completion
+
+#[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+source /usr/local/lib/python3.7/site-packages/etc/bash_completion.d/linode-cli.sh
+
+
+listening() {
+    if [ $# -eq 0 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P
+    elif [ $# -eq 1 ]; then
+        sudo lsof -iTCP -sTCP:LISTEN -n -P | grep -i --color $1
+    else
+        echo "Usage: listening [pattern]"
+    fi
+}
+alias ic="ibmcloud"
+
+complete -C /usr/local/bin/terraform terraform
