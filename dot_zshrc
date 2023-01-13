@@ -18,10 +18,10 @@ export ZSH="/Users/$USER/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 
 #ZSH_THEME="spaceship"
-ZSH_THEME="agehring"
+#ZSH_THEME="agehring"
 #ZSH_THEME="miloshadzic"
 #ZSH_THEME="gnzh"
-#ZSH_THEME="ys"
+ZSH_THEME="ys"
 
 #SPACESHIP_PROMPT_ADD_NEWLINE=”true”
 #SPACESHIP_CHAR_SYMBOL=" \uf0e7"
