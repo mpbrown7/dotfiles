@@ -8,10 +8,12 @@
 [user]
   name = Matthew Brown
   email = mpbrown7@gmail.com
+
 [core]
   autocrlf = input
   safecrlf = true
   pager = delta
+	excludesfile = ~/.gitignore
 
 [interactive]
     diffFilter = delta --color-only
