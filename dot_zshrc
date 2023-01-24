@@ -96,7 +96,7 @@ ZSH_THEME="ys"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git macos pip brew ruby virtualenv aws dune-quotes hacker-quotes gitignore)
+plugins=(git macos pip brew ruby virtualenv aws dune-quotes hacker-quotes gitignore docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -195,9 +195,9 @@ bashcompinit
 
 source $(brew --prefix)/etc/bash_completion.d/az
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
 
 #export PATH="/usr/local/opt/ruby/bin:$PATH"
 #export PATH="/Users/matthew.brown/.gem/ruby/3.0.0/bin:$PATH"
@@ -212,3 +212,6 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 #eval "$(fig init zsh post)"
 #eval "$(zsh post)"
 
+export PYENV_ROOT="$HOME/.pyenv"
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"'
+echo 'eval "$(pyenv init -)"'
