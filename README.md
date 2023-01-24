@@ -47,3 +47,8 @@ I have bashrc, bash_profile, and tmux.conf added but am not using them actively.
 - [bottom](https://github.com/ClementTsang/bottom) - like `top`/`htop`, but shows CPU/memory/disk/network stats at the same time
 - [fd](https://github.com/sharkdp/fd) - like `find`, but uses regexe by default and is much faster
 - [delta](https://github.com/dandavison/delta)
+
+## Other links
+- [Julia Evans Tweet](https://twitter.com/b0rk/status/1513903221466664962) where this question was asked and answered:
+
+  "what are your favourite newer command line tools? like ripgrep (grep replacement), fd (find), exa (ls), bat (cat), etc"
