@@ -1,9 +1,15 @@
 Host *
 HostKeyAlgorithms +ssh-rsa
 
-Host *github.com
-User mpbrown7
-IdentityFile ~/.ssh/id_ed25519_github
+Host github-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_github
+
+Host github-work
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519
 
 Host yellow-1
 User mpbrown
