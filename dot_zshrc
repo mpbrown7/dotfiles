@@ -207,6 +207,7 @@ export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$(brew --prefix)/bin:$(brew
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+autoload -U compinit && compinit
 
 # Fig post block. Keep at the bottom of this file.
 #eval "$(fig init zsh post)"
