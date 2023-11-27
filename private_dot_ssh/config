@@ -1,16 +1,21 @@
 Host *
 HostKeyAlgorithms +ssh-rsa
 
-Host github-personal
-  HostName github.com
+Host github.com
+#  AddKeysToAgent yes
   User git
-  IdentityFile ~/.ssh/id_ed25519_github
+  IdentityFile ~/.ssh/id_ed25519_gh
+
+#Host github-personal
+#  HostName github.com
+#  User git
+#  IdentityFile ~/.ssh/id_ed25519_github
 #  LogLevel DEBUG3
 
-Host github-work
-  HostName github.com
-  User git
-  IdentityFile ~/.ssh/id_ed25519
+#Host github-work
+#  HostName github.com
+#  User git
+#  IdentityFile ~/.ssh/id_ed25519
 #  LogLevel DEBUG3
 
 Host yellow-1
